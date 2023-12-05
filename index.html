@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://cdn.tickettailor.com/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="build/css/main.css" />
+    <title>Event Selection</title>
+</head>
+<body class="orders-page">
+
+    <h1>Your Orders</h1>
+
+    <form class="search">
+        <button type="button" class="search__toggle button toggle-button" aria-expanded="false" aria-controls="eventCheckboxGroup">Search by Event</button>
+        <a href="index.html" class="search__cancel">Clear Search</a>
+        <div id="eventCheckboxGroup" class="search__checkbox-group" aria-hidden="true">
+            <div class="search__checkbox">
+              <input type="checkbox" id="event1" value="summerparty">
+              <label for="event1">Summer Party – 15:00 7th July 2023</label>
+            </div>
+            <div class="search__checkbox">
+                <input type="checkbox" id="event2" value="xmasparty">
+                <label for="event2">Christmas Party – 19:00 18th Dec 2023</label>
+            </div>
+            <div class="search__checkbox">
+                <input type="checkbox" id="event3" value="halfmarathon">
+                <label for="event3">Half Marathon – 13:00 15th Sept 2024</label>
+            </div>
+            <button type="button" class="search__submit button" id="submitEventBtn">Submit</button>
+        </div>
+    </form>
+
+    <div class="orders">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" class="orders__cell orders__cell--header">Order ID</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Status</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Customer Name</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Purchase Date</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Purchase Total</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Event Name</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Event Time</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Event Date</th>
+                    <th scope="col" class="orders__cell orders__cell--header">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Event 1 -->
+                <tr class="summerparty">
+                    <td class="orders__cell orders__cell--orderid">0001</td>
+                    <td class="orders__cell orders__cell--status">Pending</td>
+                    <td class="orders__cell orders__cell--name">John Doe</td>
+                    <td class="orders__cell orders__cell--purchasedate">07-07-2023</td>
+                    <td class="orders__cell orders__cell--total">$50.00</td>
+                    <td class="orders__cell orders__cell--event">Summer Party</td>
+                    <td class="orders__cell orders__cell--eventtime">15:00</td>
+                    <td class="orders__cell orders__cell--eventdate">7th July 2023</td>
+                    <td class="orders__cell"><a class="button button--secondary" href="#" aria-label="Edit order 0001">Edit</a></td>
+                </tr>
+                <!-- Event 2 -->
+                <tr class="xmasparty">
+                    <td class="orders__cell orders__cell--orderid">0002</td>
+                    <td class="orders__cell orders__cell--status">Completed</td>
+                    <td class="orders__cell orders__cell--name">Jane Smith</td>
+                    <td class="orders__cell orders__cell--purchasedate">18-12-2023</td>
+                    <td class="orders__cell orders__cell--total">$75.00</td>
+                    <td class="orders__cell orders__cell--event">Christmas Party</td>
+                    <td class="orders__cell orders__cell--eventtime">19:00</td>
+                    <td class="orders__cell orders__cell--eventdate">18th Dec 2023</td>
+                    <td class="orders__cell"><a class="button button--secondary" href="#" aria-label="Edit order 0002">Edit</a></td>
+                </tr>
+                <!-- Event 3 -->
+                <tr class="halfmarathon">
+                    <td class="orders__cell orders__cell--orderid">0003</td>
+                    <td class="orders__cell orders__cell--status">Shipped</td>
+                    <td class="orders__cell orders__cell--name">Bob Johnson</td>
+                    <td class="orders__cell orders__cell--purchasedate">15-09-2024</td>
+                    <td class="orders__cell orders__cell--total">$100.00</td>
+                    <td class="orders__cell orders__cell--event">Half Marathon</td>
+                    <td class="orders__cell orders__cell--eventtime">13:00</td>
+                    <td class="orders__cell orders__cell--eventdate">15th Sept 2024</td>
+                    <td class="orders__cell"><a class="button button--secondary" href="#" aria-label="Edit order 0003">Edit</a></td>
+                </tr>
+                <!-- Event 4 -->
+                <tr class="summerparty">
+                    <td class="orders__cell orders__cell--orderid">0004</td>
+                    <td class="orders__cell orders__cell--status">Pending</td>
+                    <td class="orders__cell orders__cell--name">Alice Johnson</td>
+                    <td class="orders__cell orders__cell--purchasedate">12-08-2023</td>
+                    <td class="orders__cell orders__cell--total">$60.00</td>
+                    <td class="orders__cell orders__cell--event">Summer Party</td>
+                    <td class="orders__cell orders__cell--eventtime">15:00</td>
+                    <td class="orders__cell orders__cell--eventdate">7th July 2023</td>
+                    <td class="orders__cell"><a class="button button--secondary" href="#" aria-label="Edit order 0004">Edit</a></td>
+                </tr>
+                <!-- Event 5 -->
+                <tr class="summerparty">
+                    <td class="orders__cell orders__cell--orderid">0005</td>
+                    <td class="orders__cell orders__cell--status">Completed</td>
+                    <td class="orders__cell orders__cell--name">Charlie Brown</td>
+                    <td class="orders__cell orders__cell--purchasedate">25-01-2024</td>
+                    <td class="orders__cell orders__cell--total">$90.00</td>
+                    <td class="orders__cell orders__cell--event">Summer Party</td>
+                    <td class="orders__cell orders__cell--eventtime">15:00</td>
+                    <td class="orders__cell orders__cell--eventdate">7th July 2023</td>
+                    <td class="orders__cell"><a class="button button--secondary" href="#" aria-label="Edit order 0005">Edit</a></td>
+                </tr>
+                <!-- Event 6 -->
+                <tr class="halfmarathon">
+                    <td class="orders__cell orders__cell--orderid">0006</td>
+                    <td class="orders__cell orders__cell--status">Shipped</td>
+                    <td class="orders__cell orders__cell--name">Eva Miller</td>
+                    <td class="orders__cell orders__cell--purchasedate">05-05-2024</td>
+                    <td class="orders__cell orders__cell--total">$120.00</td>
+                    <td class="orders__cell orders__cell--event">Half Marathon</td>
+                    <td class="orders__cell orders__cell--eventtime">13:00</td>
+                    <td class="orders__cell orders__cell--eventdate">15th Sept 2024</td>
+                    <td class="orders__cell"><a class="button button--secondary" href="#" aria-label="Edit order 0006">Edit</a></td>
+                </tr>
+                <!-- Event 7 -->
+                <tr class="halfmarathon">
+                    <td class="orders__cell orders__cell--orderid">0007</td>
+                    <td class="orders__cell orders__cell--status">Pending</td>
+                    <td class="orders__cell orders__cell--name">Frank Williams</td>
+                    <td class="orders__cell orders__cell--purchasedate">11-11-2024</td>
+                    <td class="orders__cell orders__cell--total">$80.00</td>
+                    <td class="orders__cell orders__cell--event">Half Marathon</td>
+                    <td class="orders__cell orders__cell--eventtime">13:00</td>
+                    <td class="orders__cell orders__cell--eventdate">15th Sept 2024</td>
+                    <td class="orders__cell"><a class="button button--secondary" href="#" aria-label="Edit order 0007">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination">
+        <h2 class="pagination__count">Showing <span class="count">7</span> out of 115 Orders</h2>
+        <a class="button button--secondary pagination__action pagination__action--prev">Previous</a>
+        <a class="button button--secondary pagination__action pagination__action--next">Next</a>
+    </div>
+    
+    <div class="output">
+        <h3>Dev:</h3>
+        <div class="output__name"></div> 
+        <div class="output__value"></div>   
+    </div>
+</body>
+    
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+        // Toggle checkbox group visibility
+        $('.toggle-button').click(function () {
+            $('.search__checkbox-group').toggleClass('active');
+            $(this).toggleClass('active');
+            $('.search__cancel').addClass('active');
+
+            var expanded = $(this).hasClass('active');
+            $(this).attr('aria-expanded', expanded);
+            $('#eventCheckboxGroup').attr('aria-hidden', !expanded);
+        });
+
+        // Handle form submission
+        $('#submitEventBtn').click(function () {
+            // Get selected checkbox values and names
+            var selectedValues = [];
+            var selectedNames = [];
+
+            $('.search__checkbox-group input:checked').each(function () {
+                selectedValues.push($(this).val());
+                selectedNames.push($('label[for="' + $(this).attr('id') + '"]').text());
+            });
+
+            // Display selected values and names
+            $('.outputid').text('Selected Values: ' + selectedValues.join(', '));
+            $('.outputname').text('Selected Names: ' + selectedNames.join(', '));
+
+            // Hide rows based on selected checkboxes
+            $('tbody tr').hide();
+            selectedValues.forEach(function (value) {
+                $('tbody tr.' + value).show();
+            });
+
+            // Close checkbox group visibility
+            $('.search__checkbox-group').toggleClass('active');
+            $('.toggle-button').toggleClass('active');
+
+            // Update the count of visible rows
+            updateRowCount();
+        });
+
+        // Function to update the count of visible rows
+        function updateRowCount() {
+            var visibleRowCount = $('tbody tr:visible').length;
+            $('.count').text(visibleRowCount);
+        }
+    });
+</script>
+</body>
+</html>
