@@ -4,8 +4,7 @@
   "description": "quick sass compiler",
   "main": "index.html",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded src/scss:build/css",
-    "sass-prod": "sass --no-source-map --style=compressed src/scss:build/css"
+    "sass-dev": "sass --watch --update --style=compressed src/scss:build/css"
   },
   "author": "DK",
   "license": "ISC",
